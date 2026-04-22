@@ -1,7 +1,17 @@
 "use client";
 
 import { CirclePlus } from "@gravity-ui/icons";
-import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
+import {
+  Button,
+  Input,
+  Label,
+  ListBox,
+  Modal,
+  Surface,
+  TextField,
+  Select,
+  TextArea,
+} from "@heroui/react";
 
 export const AddPersonForm = ({ createActions }) => {
   return (
@@ -24,25 +34,77 @@ export const AddPersonForm = ({ createActions }) => {
             <Modal.Body className="p-6">
               <Surface variant="default">
                 <form action={createActions} className="flex flex-col gap-4">
-                  <TextField className="w-full" name="name" type="text">
-                    <Label>Name</Label>
-                    <Input placeholder="Enter your name" />
+                  <TextField className="w-full" name="title" type="text">
+                    <Label>Book title</Label>
+                    <Input placeholder="Enter your Book title" />
                   </TextField>
-                  <TextField className="w-full" name="email" type="email">
-                    <Label>Email</Label>
-                    <Input placeholder="Enter your email" />
+                  {/* select genre */}
+                  <Select
+                    className="w-[256px]"
+                    placeholder="Select one"
+                    name="genre"
+                  >
+                    <Label>Select Genre</Label>
+                    <Select.Trigger>
+                      <Select.Value />
+                      <Select.Indicator />
+                    </Select.Trigger>
+                    <Select.Popover>
+                      <ListBox>
+                        <ListBox.Item
+                          id="scienceFiction"
+                          textValue="Science Fiction"
+                        >
+                          Science Fiction
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item
+                          id="historicalFiction"
+                          textValue="Historical Fiction"
+                        >
+                          Historical Fiction
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id="education" textValue="Education">
+                          Education
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                      </ListBox>
+                    </Select.Popover>
+                  </Select>
+
+                  {/* SELECT LAMGUAGE OF THE BOOK */}
+                  <Select
+                    className="w-[256px]"
+                    placeholder="Select one"
+                    name="language"
+                  >
+                    <Label>Select Genre</Label>
+                    <Select.Trigger>
+                      <Select.Value />
+                      <Select.Indicator />
+                    </Select.Trigger>
+                    <Select.Popover>
+                      <ListBox>
+                        <ListBox.Item id="English" textValue="English">
+                          English
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                        <ListBox.Item id=" Bangla" textValue=" Bangla">
+                          Bangla
+                          <ListBox.ItemIndicator />
+                        </ListBox.Item>
+                      </ListBox>
+                    </Select.Popover>
+                  </Select>
+
+                  <TextField className="w-full" name="author">
+                    <Label>Author</Label>
+                    <Input placeholder="Enter author name" />
                   </TextField>
-                  <TextField className="w-full" name="phone" type="tel">
-                    <Label>Phone</Label>
-                    <Input placeholder="Enter your phone number" />
-                  </TextField>
-                  <TextField className="w-full" name="company">
-                    <Label>Company</Label>
-                    <Input placeholder="Enter your company name" />
-                  </TextField>
-                  <TextField className="w-full" name="message">
-                    <Label>Message</Label>
-                    <Input placeholder="Enter your message" />
+                  <TextField className="w-full" name="description">
+                    <Label>Book Description</Label>
+                    <TextArea placeholder="Enter Book Description" />
                   </TextField>
                   <Modal.Footer>
                     <Button slot="close" variant="secondary">
