@@ -1,0 +1,64 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Silent Horizon",
+      "author": "Ava Thompson",
+      "genre": "Science Fiction",
+      "price": 15.99,
+      "rating": 4.5,
+      "published_year": 2021,
+      "description": "A journey beyond the stars where humanity faces its greatest challenge in an unknown galaxy.",
+      "pages": 320,
+      "language": "English"
+    },
+    {
+      "id": 2,
+      "title": "Whispers of the Past",
+      "author": "Liam Carter",
+      "genre": "Historical Fiction",
+      "price": 12.5,
+      "rating": 4.2,
+      "published_year": 2019,
+      "description": "A gripping tale of love and betrayal set during the early 19th century.",
+      "pages": 280,
+      "language": "English"
+    },
+    {
+      "id": 3,
+      "title": "Mastering Python",
+      "author": "Sophia Lee",
+      "genre": "Education",
+      "price": 25.0,
+      "rating": 4.8,
+      "published_year": 2023,
+      "description": "A complete guide to Python programming from basics to advanced concepts with practical examples.",
+      "pages": 450,
+      "language": "English"
+    },
+    {
+      "id": 4,
+      "title": "The Mindful Path",
+      "author": "Noah Williams",
+      "genre": "Self-help",
+      "price": 10.99,
+      "rating": 4.3,
+      "published_year": 2020,
+      "description": "Discover the power of mindfulness and how to live a peaceful and focused life.",
+      "pages": 220,
+      "language": "English"
+    },
+    {
+      "id": 5,
+      "title": "Digital Gold Rush",
+      "author": "Emma Brown",
+      "genre": "Business",
+      "price": 18.75,
+      "rating": 4.6,
+      "published_year": 2022,
+      "description": "An insightful look into the world of startups, innovation, and the future of digital economies.",
+      "pages": 310,
+      "language": "English"
+    }
+  ]
+}
