@@ -1,5 +1,7 @@
 import { getBooks } from "@/lib/getBooks";
 import BooksCard from "./Component/BooksCard";
+import { AddPersonForm } from "@/Componets/AddPersonForm";
+import { createActions } from "@/lib/actions";
 
 const BooksPage = async () => {
   const books = await getBooks();
@@ -12,6 +14,11 @@ const BooksPage = async () => {
         {books.books.map((book) => (
           <BooksCard key={book.id} book={book} />
         ))}
+      </div>
+
+      {/* adding form data here  */}
+      <div className="flex items-center justify-center">
+        <AddPersonForm createActions={createActions} />
       </div>
     </div>
   );
