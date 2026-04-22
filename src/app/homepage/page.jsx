@@ -4,7 +4,7 @@ export const metadata = {
 };
 const HomePage = () => {
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center space-y-5 mt-6 bg-gray-100">
+    <div className="mx-auto container flex justify-center items-center flex-col">
       <h2> This my Home Page</h2>
       <Button variant="primary">Hero Ui Btn</Button>
     </div>
